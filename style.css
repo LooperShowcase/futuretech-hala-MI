@@ -1,0 +1,118 @@
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Overall styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D9F4C7;
+    color: #74007a;
+}
+
+.mytitle {
+    font-size: 50px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header styles */
+h1 {
+    margin-bottom: 50px;
+    color: #9DCDC0;
+}
+
+/* Input and button styles */
+input[type="text"],
+button {
+    padding: 25.5px;
+    border-radius:50px;
+    outline: none;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: 20px solid #dcd2db;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(249, 180, 77);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+/* Paragraph styles */
+p {
+    margin-top: 20px;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 35px;
+    margin-top: 30px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.cards {
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(2, 210px);
+  }
+.card {
+    height: 210px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+}
+  
+.front-image {
+    width: 60px;
+    height: 60px;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
